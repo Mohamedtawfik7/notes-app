@@ -8,16 +8,14 @@ class AddModalBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(),
-      child: Column(
-        children: [
-          SizedBox(
-            height: 66,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-              child: CustomTextField(),
-            ),
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+        child: Column(
+          children: [
+            SizedBox(height: 66, child: CustomTextField(hint: ' Title')),
+            CustomTextField(hint: 'Content', maxLines: 5),
+          ],
+        ),
       ),
     );
   }
