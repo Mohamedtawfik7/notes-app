@@ -51,9 +51,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
           CustomButton(
             onTap: () {
               if (formKey.currentState!.validate()) {
-                formKey.currentState!.validate();
+                formKey.currentState!.save();
               } else {
                 autovalidateMode = AutovalidateMode.always;
+                setState(() {});
               }
             },
           ),
